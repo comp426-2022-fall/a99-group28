@@ -1,8 +1,7 @@
 import Home from "./pages/home/Home";
-import {Person} from '@material-ui/icons';
 
 function App() {
-      return <Person/>
+      return <Home/>
 }
 
 export default App;
