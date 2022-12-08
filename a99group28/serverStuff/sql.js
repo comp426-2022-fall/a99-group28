@@ -41,6 +41,7 @@ app.get("/createdb", (req, res) =>{
     });
 });
 
+
 //connects database
 app.get("/", (req, res) =>{
     sql = "USE userData"
@@ -52,6 +53,7 @@ app.get("/", (req, res) =>{
         console.log("database running")
     });
 });
+
 
 
 //creates user table

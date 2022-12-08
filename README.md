@@ -19,6 +19,11 @@ To run this follow the steps below:
 ## Implementations
 
 ## Dependencies
+1. MySQL
+2. Axios
+3. Cores
+4. Express
+5. React
 
 ## Endpoints
 

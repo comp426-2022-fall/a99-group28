@@ -18,6 +18,16 @@
     
 }
 
+.yourname{
+    font-size: 20px;
+    margin-left: 24px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    align-items: right;
+    
+}
+
 .searchbar{
     width: 100%;
     height: 30px;
