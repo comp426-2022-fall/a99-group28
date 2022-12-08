@@ -23,7 +23,7 @@ Andrew Knotts - Frontend
 
 Davis Smith - Backend
 
-- Developed a database using __
+- Developed a database using SQL
 
 Mikaela Sherry - Product Manager
 
