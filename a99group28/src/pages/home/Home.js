@@ -1,7 +1,6 @@
-import Rightbar from "../../components/rightbar/Rightbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
-import Feed  from "../../components/feed/Feed";
+
 import './home.css'
 import { useState } from "react";
 import Axios from "axios";
@@ -42,7 +41,11 @@ export default function Home(){
     const options = {
     method: 'GET',
     url: 'https://love-calculator.p.rapidapi.com/getPercentage',
-    params: {fname: 'John', sname: 'Alice'},
+    params: {fname: f_name, sname: 'Alice'},
+    headers: {
+        'X-RapidAPI-Key': '703558ec3bmshef7ac65c502cce8p1f3ac8jsn349957f27b6d',
+        'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
+      }
     
     };
     
@@ -54,8 +57,6 @@ export default function Home(){
         });
     };
    
-    
-
     
     return (
         <>
@@ -99,18 +100,15 @@ export default function Home(){
                 />
 
                 <button onClick={adduser}>Add User</button>
-                <button onClick={getPercentage}> Get Compatibility Test</button>
             
             
             </div>
             <div className="users">
                 <button onClick={getUsers}>Get Compatibility</button>
-               
+
             </div>
          
         <Sidebar/>
-        <Feed/>
-        <Rightbar/>
         </div>
         </>
     )
