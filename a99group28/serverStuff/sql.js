@@ -169,10 +169,10 @@ app.post("/updatepassword/:id", (req, res) =>{
 });
 
 //delet user
-app.delete("/deleteuser/:id", (req, res) =>{
+app.get("/deleteuser/:id", (req, res) =>{
     let id = req.params.id;
 
-    let sql = "DELETE FROM user WHERE user_id =" + id;
+    let sql = "DELETE FROM users WHERE user_id =" + id;
 
     let query= db.query(sql, (err) =>{
         if(err){
@@ -192,7 +192,6 @@ app.get("/getnames", (req, res) =>{
             throw err
         }
         res.send(result);
-        console.log(result);
     });
 });
 
