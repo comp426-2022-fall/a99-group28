@@ -6,44 +6,44 @@
 
 **getuser**
 
-*Pulls a user based on id
+*Pulls a user based on id*
 
 **getname**
 
-*Pulls all first and last names
+*Pulls all first and last names*
 
 **deleteuser**
 
-*Deletes a user
+*Deletes a user*
 
 **updatepassword**
 
-*Updates user password
+*Updates user password*
 
 **updateemail**
 
-*Updates user email
+*Updates user email*
 
 **updatelastname**
 
-*Updates a user’s last name
+*Updates a user’s last name*
 
-**updatefirstname
+**updatefirstname**
 
-*Updates a user’s first name
+*Updates a user’s first name*
 
-**adduser
+**adduser**
 
-*Adds a user
+*Adds a user*
 
-**posttest
+**posttest**
 
-*Tests for post request
+*Tests for post request*
 
-**createtable
+**createtable**
 
-*Creates a user table
+*Creates a user table*
 
-**createdb
+**createdb**
 
-*Creates the data base
+*Creates the data base*
