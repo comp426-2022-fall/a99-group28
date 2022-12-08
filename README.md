@@ -46,5 +46,7 @@ Mikaela Sherry - Product Manager
 ```
 ## Team Planning
 
+Information on team planning [here]()
+
 ## License
 GPL-3.0-or-later
