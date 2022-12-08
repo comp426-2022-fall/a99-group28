@@ -12,29 +12,9 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-        <ul className="sidebarList">
-          <li className="sidebarListItem">
-            <RssFeedIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Feed</span>
-          </li>
-          <li className="sidebarListItem">
-            <ChatIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Chats</span>
-          </li>
-          <li className="sidebarListItem">
-            <PlayCircleFilledIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Videos</span>
-          </li>
-          <li className="sidebarListItem">
-            <GroupIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Groups</span>
-          </li>
-          <li className="sidebarListItem">
-            <BookmarkIcon className="sidebarIcon" />
-            <span className="sidebarListItemText">Bookmarks</span>
-          </li>
-        </ul>
-        <button className="sidebarButton">Show More</button>
+        <span className="nameConnections">
+          Name Connections
+        </span>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           {Users.map((u) => (

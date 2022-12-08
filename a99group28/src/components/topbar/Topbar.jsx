@@ -13,15 +13,24 @@ export default function Topbar(){
             <span className="logo">Nomenconnect</span>
         </div>
         <div className="topbarCenter">
+        <span className="topbarName">Welcome... PROFILE NAME</span>
+            {/*
             <div className="searchbar">
                <SearchIcon className="searchIcon"/>
+               
                <input placeholder="Search for friend or post" className="searchInput" />
             </div>
+   */}
         </div>
+
+
         <div className="topbarRight">
+
+
             <div className="topbarLinks">
                <span className="topbarLink">Homepage</span>
             </div>
+            {/*
       <div className="topbarIcons">
          <div className="topbarIconItem">
             <PersonIcon/>  
@@ -35,8 +44,10 @@ export default function Topbar(){
             <NotificationsIcon/>  
             <span className="topbarIconBadge">1</span>
          </div>
+         
       </div>
       <img src="/assets/people/patrick2.jpeg" alt="" className="topbarImg" />
+      */}
     </div>
 
     </div>
