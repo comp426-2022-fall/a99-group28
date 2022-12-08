@@ -46,7 +46,7 @@ Mikaela Sherry - Product Manager
 ```
 ## Team Planning
 
-Information on team planning [here]()
+Information on team planning [here](https://github.com/comp426-2022-fall/a99-group28/blob/b01c68642f428023b940f08bc0d0f9d89e244e79/Plan.md)
 
 ## License
 GPL-3.0-or-later
