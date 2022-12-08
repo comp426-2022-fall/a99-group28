@@ -11,9 +11,14 @@ Nomen is a social media website to see who you are compatible with based off of 
 ## Setup
 
 To run this follow the steps below:
-
+```
 1. Clone the repository using git clone
 2. do things and stuff
+```
+
+## Implementations
+
+## Dependencies
 
 ## Team Member Roles
 
@@ -28,6 +33,8 @@ Davis Smith - Backend
 Mikaela Sherry - Product Manager
 
 - Did things and stuff
+
+## Team Planning
 
 ## License
 GPL-3.0-or-later
