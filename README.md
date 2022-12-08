@@ -27,6 +27,7 @@ To run this follow the steps below:
 
 ## Endpoints
 
+Information on endpoints [here]
 
 **getPercentage**
 
