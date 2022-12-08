@@ -12,6 +12,7 @@ export default function Home(){
     const [email, setEmail] = useState("");
     const [password, setPasword] = useState("");
     
+    const [userList, getNames] = useState("");
 
     const displayInfo = () =>{
         console.log(first_name + last_name + email + password);
@@ -26,6 +27,12 @@ export default function Home(){
             password: password,
         }).then(() =>{
             console.log("User added");
+        });
+    };
+
+    const getUsers = () =>{
+        Axios.get('http://localhost:3001/getnames').then((response) => {
+            getNames(response.data);
         });
     };
 
@@ -44,7 +51,7 @@ export default function Home(){
                 />
 
                 <label>Last Name:</label>
-                <input type="text" 
+                <input type="text"  
                 onChange={(event) => {
                     setLName(event.target.value);
                   }}
@@ -65,8 +72,9 @@ export default function Home(){
                 />
 
                 <button onClick={adduser}>Add User</button>
-
-            
+            </div>
+            <div className="users">
+                <button onClick={getUsers}> Get User Names</button>
 
             </div>
          
