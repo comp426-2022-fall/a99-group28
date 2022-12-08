@@ -11,14 +11,14 @@ export default function Home(){
     const [email, setEmail] = useState("");
     const [password, setPasword] = useState("");
     
-    const [f_name, setCompatibility] = useState("");
-
+    //holds name for compatibility comparison
+    var [f_name, setCompatibility] = useState("");
+    var second_name = 'alice';
+    var percentage = 0;
+    
     const [userList, getNames] = useState("");
 
-    const displayInfo = () =>{
-        console.log(first_name + last_name + email + password);
 
-    }
 
     const adduser = () =>{
         Axios.post('http://localhost:3001/adduser', {
@@ -41,7 +41,7 @@ export default function Home(){
     const options = {
     method: 'GET',
     url: 'https://love-calculator.p.rapidapi.com/getPercentage',
-    params: {fname: f_name, sname: 'Alice'},
+    params: {fname: f_name, sname: second_name},
     headers: {
         'X-RapidAPI-Key': '703558ec3bmshef7ac65c502cce8p1f3ac8jsn349957f27b6d',
         'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
@@ -49,12 +49,15 @@ export default function Home(){
     
     };
     
-    const getPercentage = () =>{
+    function getPercentage(){
         Axios.request(options).then(function (response) {
-            console.log(response.data);
+            percentage = response.data.percentage;
+            console.log("api: " + percentage);
+            return response.data.percentage;
         }).catch(function (error) {
             console.error(error);
         });
+        
     };
    
     
@@ -103,9 +106,22 @@ export default function Home(){
             
             
             </div>
+        
             <div className="users">
                 <button onClick={getUsers}>Get Compatibility</button>
+                {userList.map((val, key) =>{
 
+                    var output;
+                    second_name = val.first_name;
+                    getPercentage();
+                    console.log(f_name + " " + percentage + " " + second_name);
+                    output = f_name + " and " + val.first_name + " have " + percentage +" percent compatibilty";
+                    return<div>{output}</div>
+                    
+                })}
+               
+
+                <button onClick={getPercentage}>API TEST</button>
             </div>
          
         <Sidebar/>
