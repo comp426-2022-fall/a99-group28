@@ -27,11 +27,7 @@ To run this follow the steps below:
 
 ## Endpoints
 
-
-**getPercentage**
-
-*Takes in two names and returns a percentage value with compatibility*
-
+Information on endpoints [here](https://github.com/comp426-2022-fall/a99-group28/blob/01d273e807a4896927dc54e426440df042098aa7/Endpoints.md)
 
 ## Team Member Roles
 ```
