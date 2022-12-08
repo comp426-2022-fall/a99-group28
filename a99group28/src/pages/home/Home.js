@@ -12,6 +12,8 @@ export default function Home(){
     const [email, setEmail] = useState("");
     const [password, setPasword] = useState("");
     
+    const [f_name, setCompatibility] = useState("");
+
     const [userList, getNames] = useState("");
 
     const displayInfo = () =>{
@@ -33,8 +35,26 @@ export default function Home(){
     const getUsers = () =>{
         Axios.get('http://localhost:3001/getnames').then((response) => {
             getNames(response.data);
+            console.log("Users Fecthed")
         });
     };
+
+    const options = {
+    method: 'GET',
+    url: 'https://love-calculator.p.rapidapi.com/getPercentage',
+    params: {fname: 'John', sname: 'Alice'},
+    
+    };
+    
+    const getPercentage = () =>{
+        Axios.request(options).then(function (response) {
+            console.log(response.data);
+        }).catch(function (error) {
+            console.error(error);
+        });
+    };
+   
+    
 
     
     return (
@@ -71,13 +91,21 @@ export default function Home(){
                   }}
                 />
 
+                <label>First Name For Compatibility Test</label>
+                <input type = "text"
+                onChange={(event) =>{
+                    setCompatibility(event.target.value);
+                }}
+                />
+
                 <button onClick={adduser}>Add User</button>
+                <button onClick={getPercentage}> Get Compatibility Test</button>
+            
+            
             </div>
             <div className="users">
-                <button onClick={getUsers}> Get User Names</button>
-                {userList.map((val, key) => {
-                    return <div>{val.first_name}</div>
-                })}
+                <button onClick={getUsers}>Get Compatibility</button>
+               
             </div>
          
         <Sidebar/>
