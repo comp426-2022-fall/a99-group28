@@ -29,6 +29,7 @@ To run this follow the steps below:
 
 
 **getPercentage**
+
 *Takes in two names and returns a percentage value with compatibility*
 
 
