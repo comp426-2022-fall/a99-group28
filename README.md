@@ -4,6 +4,10 @@
 
 Nomen is a social media website to see who you are compatible with based off of the linguistics of you and your potential partner’s names. Simply enter both names and receive percentage compatibility between the two of you.
 
+## Demo
+
+🐸 add a link to demo 🐸
+
 ## Setup
 
 To run this follow the steps below:
