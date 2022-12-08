@@ -193,6 +193,7 @@ app.get("/getnames", (req, res) =>{
         if(err){
             throw err
         }
+        console.log(result);
         res.send(result);
     });
 });
