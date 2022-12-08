@@ -20,8 +20,6 @@ export default function Home(){
         console.log(first_name + last_name + email + password);
 
     }
-    
-    var sname;
 
     const adduser = () =>{
         Axios.post('http://localhost:3001/adduser', {
@@ -35,28 +33,22 @@ export default function Home(){
     };
 
     const getUsers = () =>{
-        Axios.get('http://cors-anywhere.localhost:3001/getnames').then((response) => {
+        Axios.get('http://localhost:3001/getnames').then((response) => {
             getNames(response.data);
             console.log("Users Fecthed")
-            console.log(f_name);
-            
         });
     };
-
 
     const options = {
     method: 'GET',
     url: 'https://love-calculator.p.rapidapi.com/getPercentage',
-    params: {fname:f_name, sname: 'Alice'},
-    headers: {
-        'X-RapidAPI-Key': '703558ec3bmshef7ac65c502cce8p1f3ac8jsn349957f27b6d',
-        'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
-      }
+    params: {fname: 'John', sname: 'Alice'},
+    
     };
     
     const getPercentage = () =>{
         Axios.request(options).then(function (response) {
-            console.log(response.data.percentage);
+            console.log(response.data);
         }).catch(function (error) {
             console.error(error);
         });
@@ -99,9 +91,6 @@ export default function Home(){
                   }}
                 />
 
-                <button onClick={adduser}>Add User</button>
-                
-
                 <label>First Name For Compatibility Test</label>
                 <input type = "text"
                 onChange={(event) =>{
@@ -109,11 +98,14 @@ export default function Home(){
                 }}
                 />
 
-                <button onClick={getUsers}>Get Compatibility</button>
-               
+                <button onClick={adduser}>Add User</button>
+                <button onClick={getPercentage}> Get Compatibility Test</button>
+            
+            
             </div>
             <div className="users">
-                
+                <button onClick={getUsers}>Get Compatibility</button>
+               
             </div>
          
         <Sidebar/>
