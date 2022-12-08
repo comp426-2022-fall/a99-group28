@@ -28,7 +28,9 @@ To run this follow the steps below:
 ## Endpoints
 
 ```
-getPercentage
+**getPercentage**
+*Takes in two names and returns a percentage value with compatibility*
+
 ```
 
 ## Team Member Roles
