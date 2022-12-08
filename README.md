@@ -20,6 +20,12 @@ To run this follow the steps below:
 
 ## Dependencies
 
+## Endpoints
+
+```
+getPercentage
+```
+
 ## Team Member Roles
 ```
 Andrew Knotts - Frontend
