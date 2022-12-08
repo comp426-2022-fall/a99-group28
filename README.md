@@ -21,4 +21,6 @@ Davis Smith - Backend
 
 - Developed a database using __
 
-Mikaela Sherry -
+Mikaela Sherry - Product Manager
+
+- Did things and stuff
