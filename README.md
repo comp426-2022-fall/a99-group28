@@ -21,7 +21,7 @@ To run this follow the steps below:
 ## Dependencies
 
 ## Team Member Roles
-
+```
 Andrew Knotts - Frontend
 
 - Created front end
@@ -33,7 +33,7 @@ Davis Smith - Backend
 Mikaela Sherry - Product Manager
 
 - Did things and stuff
-
+```
 ## Team Planning
 
 ## License
