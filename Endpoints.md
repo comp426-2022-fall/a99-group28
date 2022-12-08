@@ -1,34 +1,49 @@
 ## Endpoints
 
-getuser
-- Pulls a user based on id
+**getPercentage**
 
-getname
-- Pulls all first and last names
+*Takes in two names and returns a percentage value with compatibility*
 
-deleteuser
-- Deletes a user
+**getuser**
 
-updatepassword
-- Updates user password
+*Pulls a user based on id
 
-updateemail
-- Updates user email
+**getname**
 
-updatelastname
-- Updates a user’s last name
+*Pulls all first and last names
 
-updatefirstname
-- Updates a user’s first name
+**deleteuser**
 
-adduser
-- Adds a user
+*Deletes a user
 
-posttest
-- Tests for post request
+**updatepassword**
 
-createtable
-- Creates a user table
+*Updates user password
 
-createdb
-- Creates the data base
+**updateemail**
+
+*Updates user email
+
+**updatelastname**
+
+*Updates a user’s last name
+
+**updatefirstname
+
+*Updates a user’s first name
+
+**adduser
+
+*Adds a user
+
+**posttest
+
+*Tests for post request
+
+**createtable
+
+*Creates a user table
+
+**createdb
+
+*Creates the data base
