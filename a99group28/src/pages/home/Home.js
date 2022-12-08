@@ -75,10 +75,11 @@ export default function Home(){
             </div>
             <div className="users">
                 <button onClick={getUsers}> Get User Names</button>
-
+                {userList.map((val, key) => {
+                    return <div>{val.first_name}</div>
+                })}
             </div>
          
-        
         <Sidebar/>
         <Feed/>
         <Rightbar/>

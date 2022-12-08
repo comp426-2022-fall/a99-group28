@@ -29,3 +29,20 @@
 .input button:hover {
     cursor: pointer;
 }
+
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.users button{
+    width: 320px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.users button:hover {
+    cursor: pointer;
+}
