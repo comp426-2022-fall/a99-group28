@@ -1,6 +1,8 @@
 const express = require("express")
 const mysql = require("mysql")
-var bodyParser = require('body-parser')
+const cors = require('cors');
+
+
 
 
 //create connection
@@ -23,6 +25,7 @@ db.connect((err) =>{
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -79,23 +82,25 @@ app.post("/posttest", (req, res) =>{
 //add user
 app.post("/adduser", (req, res) =>{
     var data = req.body;
-    let post = { first_name: data.first_name, last_name: data.last_name, email: data.email, password: data.password};
-
+    const first_name = data.first_name;
+    const last_name = data.last_name;
+    const email = data.email;
+    const password =data.password
+    
     console.log(data.first_name);
 
-    let sql = "INSERT INTO users SET ?";
-    
-    let query = db.query(sql, post, (err) =>{
-        if(err){
-            throw err;
-        }
-
-        res.send("User added\n");
+    db.query("INSERT INTO users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)",
+        [first_name, last_name, email, password], 
+        (err, results) =>{
+            if(err){
+                throw err;
+            }
+            res.send("User added\n");
     });
 });
 
 //update user first name
-app.post("/updatefirstanme:id", (req, res) =>{
+app.post("/updatefirstanme/:id", (req, res) =>{
     let data = req.body;
     let id = req.params.id;
     let first_name = data.first_name;
@@ -112,7 +117,7 @@ app.post("/updatefirstanme:id", (req, res) =>{
 });
 
 //update user last name
-app.post("/updatelastname:id", (req, res) =>{
+app.post("/updatelastname/:id", (req, res) =>{
     let data = req.body;
     let id = req.params.id;
     let last_name = data.last_name;
@@ -129,7 +134,7 @@ app.post("/updatelastname:id", (req, res) =>{
 });
 
 //update user email
-app.post("/updateemail:id", (req, res) =>{
+app.post("/updateemail/:id", (req, res) =>{
     let data = req.body;
     let id = req.params.id;
     let last_name = data.email;
@@ -146,7 +151,7 @@ app.post("/updateemail:id", (req, res) =>{
 });
 
 //update user password
-app.post("/updatepassword:id", (req, res) =>{
+app.post("/updatepassword/:id", (req, res) =>{
     let data = req.body;
     let id = req.params.id;
     let last_name = data.password;
@@ -164,7 +169,7 @@ app.post("/updatepassword:id", (req, res) =>{
 });
 
 //delet user
-app.post("/deleteuser:id", (req, res) =>{
+app.delete("/deleteuser/:id", (req, res) =>{
     let id = req.params.id;
 
     let sql = "DELETE FROM user WHERE user_id =" + id;
@@ -179,16 +184,15 @@ app.post("/deleteuser:id", (req, res) =>{
 });
 
 //pull all first and last names
-app.get("/getnames/", (req, res) =>{
+app.get("/getnames", (req, res) =>{
     let sql = "SELECT first_name, last_name FROM users";  
     
-    let query = db.query(sql, function(err, results, feilds) {
+    let query = db.query(sql, function(err, result) {
         if(err){
             throw err
         }
-        let data = JSON.stringify(results)
-        console.log(data);
-        res.send(data);
+        res.send(result);
+        console.log(result);
     });
 });
 
@@ -207,8 +211,8 @@ app.get("/getuser/:id", (req, res) =>{
 });
 
 //start the app
-app.listen("3000", () =>{
-    console.log("Server started on port 3000");
+app.listen("3001", () =>{
+    console.log("Server started on port 3001");
 });
 
 
