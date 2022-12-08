@@ -28,3 +28,6 @@ Davis Smith - Backend
 Mikaela Sherry - Product Manager
 
 - Did things and stuff
+
+## License
+GPL-3.0-or-later
