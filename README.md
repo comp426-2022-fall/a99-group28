@@ -18,8 +18,6 @@ To run this follow the steps below:
 2. do things and stuff
 ```
 
-## Implementations
-
 ## Dependencies
 1. MySQL
 2. Axios
