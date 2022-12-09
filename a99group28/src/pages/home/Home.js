@@ -12,9 +12,10 @@ export default function Home(){
     const [password, setPasword] = useState("");
     
     //holds name for compatibility comparison
-    var [f_name, setCompatibility] = useState("");
+    var [f_name, setCompatibility1] = useState("");
+    var [s_name, setCompatibility2] = useState("");
     var second_name = 'alice';
-    var percentage = 0;
+    var [percentage, setPercetage] = useState("");
     
     const [userList, getNames] = useState("");
 
@@ -51,16 +52,14 @@ export default function Home(){
     
     function getPercentage(){
         Axios.request(options).then(function (response) {
-            percentage = response.data.percentage;
+            setPercetage(response.data.percentage); 
             console.log("api: " + percentage);
-            return response.data.percentage;
         }).catch(function (error) {
             console.error(error);
         });
         
     };
-   
-    
+
     return (
         <>
 
@@ -98,30 +97,35 @@ export default function Home(){
                 <label>First Name For Compatibility Test</label>
                 <input type = "text"
                 onChange={(event) =>{
-                    setCompatibility(event.target.value);
+                    setCompatibility1(event.target.value);
                 }}
                 />
 
+
+                <label>Second Name For Compatibility Test</label>
+                <input type = "text"
+                onChange={(event) =>{
+                    setCompatibility2(event.target.value);
+                }}
+                />  
                 <button onClick={adduser}>Add User</button>
             
             
             </div>
         
             <div className="users">
-                <button onClick={getUsers}>Get Compatibility</button>
+                <button onClick={getPercentage}>Get Compatibility</button>
+                <div>{percentage}</div>
+                <button onClick={getUsers}>Get all Users</button>
                 {userList.map((val, key) =>{
 
-                    var output;
-                    second_name = val.first_name;
-                    getPercentage();
-                    console.log(f_name + " " + percentage + " " + second_name);
-                    output = f_name + " and " + val.first_name + " have " + percentage +" percent compatibilty";
-                    return<div>{output}</div>
-                    
-                })}
-               
+                var output;
+                second_name = val.first_name;
+                output = val.first_name + " " + val.last_name;
+                return<div>{output}</div>   
 
-                <button onClick={getPercentage}>API TEST</button>
+})}
+
             </div>
          
         <Sidebar/>
