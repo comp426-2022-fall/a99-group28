@@ -41,7 +41,8 @@ Davis Smith - Backend
 ```
 ```
 Mikaela Sherry - Product Manager
-- Did things and stuff
+- Wrote documentation
+- Organized team meetings and encouraged collaboration
 ```
 ## Team Planning
 
