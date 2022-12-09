@@ -24,6 +24,7 @@ To run this follow the steps below:
 3. Cores
 4. Express
 5. React
+6. Node
 
 ## Endpoints
 
