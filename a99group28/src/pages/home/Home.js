@@ -66,6 +66,7 @@ export default function Home(){
         <Topbar/>
          <div className="homeContainer">
             <div className="input">
+                <div className="register">Register</div>
                 <label>First Name:</label>
                   <input type="text" 
                   onChange={(event) => {
@@ -93,7 +94,7 @@ export default function Home(){
                     setPasword(event.target.value);
                   }}
                 />
-
+                <div className="feilds">
                 <label>First Name For Compatibility Test</label>
                 <input type = "text"
                 onChange={(event) =>{
@@ -108,14 +109,19 @@ export default function Home(){
                     setCompatibility2(event.target.value);
                 }}
                 />  
-                <button onClick={adduser}>Add User</button>
-            
+                
+                <button onClick={getPercentage}>Get Compatibility</button>
+                <div className="percent">{percentage}%</div>
+
+                </div>
             
             </div>
         
             <div className="users">
-                <button onClick={getPercentage}>Get Compatibility</button>
-                <div>{percentage}</div>
+                
+                
+                <button onClick={adduser}>Add User</button>
+
                 <button onClick={getUsers}>Get all Users</button>
                 {userList.map((val, key) =>{
 
@@ -123,12 +129,9 @@ export default function Home(){
                 second_name = val.first_name;
                 output = val.first_name + " " + val.last_name;
                 return<div>{output}</div>   
-
-})}
-
+                })}
             </div>
          
-        <Sidebar/>
         </div>
         </>
     )

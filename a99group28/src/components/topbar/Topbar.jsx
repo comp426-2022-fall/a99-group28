@@ -13,11 +13,11 @@ export default function Topbar(){
             <span className="logo">Nomenconnect</span>
         </div>
         <div className="topbarCenter">
-             <span className="yourname">Some kinda message here?</span>
+             <span className="yourname">Find your soul name! :3</span>
         </div>
         <div className="topbarRight">
             <div className="topbarLinks">
-               <span className="topbarLink">Homepage</span>
+               <span className="topbarLink"></span>
             </div>
       <div className="topbarIcons">
          

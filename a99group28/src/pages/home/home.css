@@ -100,3 +100,16 @@
     cursor: pointer;
     color: green;
 }
+
+.feilds{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent{
+    font-weight: 800px;
+    font-size: larger;
+}
