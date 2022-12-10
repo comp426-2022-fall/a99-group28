@@ -8,7 +8,7 @@ Nomen is a social media website to see who you are compatible with based off of 
 
 ## Demo
 
-🐸 add a link to demo 🐸
+🐸 [link to demo](https://github.com/comp426-2022-fall/a99-group28/blob/f56ffe1c4eecb85344cbe4aff79184e3e4400811/video1164987996.mp4) 🐸
 
 ## Setup
 
